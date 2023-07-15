@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
     stages {
@@ -11,7 +12,14 @@ pipeline {
 				}
 			}
 			//code ends here
-	
+
+			//code for stage PMD
+			stage('PMD'){
+				steps{
+					sh 'mvn site'
+				}
+			}
+			//code ends here for PMD
 			
 		
 		// ******ALL CODE TO BE ADDED ABOVE THIS COMMENT******
